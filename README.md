@@ -2,7 +2,7 @@
 
 Repo to save my nvim configs. (I'm still a noob on it)
 
-some of the configs are from [here](https://www.manualdocodigo.com.br/vim-basico/)
+some of the configs are from [here](https://www.manualdocodigo.com.br/vim-basico/) and [there](https://school.geekwall.in/p/6ck7OZ1d/setting-up-neovim-for-web-development-in-2020)
 
 ## Things to do
 
