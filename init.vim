@@ -24,6 +24,9 @@ if (has("nvim"))
   Plug 'nvim-telescope/telescope.nvim'
 endif
 
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
 call plug#end()
 
 " Global Sets """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -84,6 +87,17 @@ nmap tt :q<CR>
 " Call command shortcut
 nmap tc :!
 
+" turn terminal to normal mode with escape
+tnoremap <Esc> <C-\><C-n>
+" start terminal in insert mode
+au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+" open terminal on ctrl+n
+function! OpenTerminal()
+  split term://zsh
+  resize 10
+endfunction
+nnoremap <c-n> :call OpenTerminal()<CR>
+
 " autocmd """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! HighlightWordUnderCursor()
   if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]'
@@ -136,7 +150,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " COC (Conquer of Completion) """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:coc_global_extensions = [ ]
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-prettier', 'coc-tsserver']
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
