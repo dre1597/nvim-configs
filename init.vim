@@ -29,6 +29,7 @@ call plug#end()
 " Global Sets """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on            " Enable syntax highlight
 set number           " Enable line numbers
+"set relativenumber  " Enable relative numbers
 set tabstop=2        " Show existing tab with 2 spaces width
 set softtabstop=2    " Show existing tab with 2 spaces width
 set shiftwidth=2     " When indenting with '>', use 2 spaces width
@@ -51,6 +52,8 @@ set splitright       " Create the vertical splits to the right
 set splitbelow       " Create the horizontal splits below
 set autoread         " Update vim after file update from outside
 set mouse=a          " Enable mouse support
+set ttyfast          " Fast scroll
+set spell            " Spell check
 filetype on          " Detect and set the filetype option and trigger the FileType Event
 filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
