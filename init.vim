@@ -13,6 +13,8 @@ Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+Plug 'airblade/vim-gitgutter'
+
 Plug 'dense-analysis/ale'
 
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
@@ -23,6 +25,8 @@ if (has("nvim"))
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
 endif
+
+Plug 'frazrepo/vim-rainbow'
 
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
@@ -146,6 +150,10 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+
+"Vim Rainbow
+let g:rainbow_active = 1
 
 
 " COC (Conquer of Completion) """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
